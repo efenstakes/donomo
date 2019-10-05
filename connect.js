@@ -8,7 +8,7 @@ const connect = async ()=> {
     let connection 
 
     try{
-        connection = await mongoose.connect('mongodb://localhost:27017/donomo', { useNewUrlParser: true })
+        connection = await mongoose.connect('mongodb://mongo:27017/donomo', { useNewUrlParser: true })
         console.log('connected to db')
     }catch(e){
         console.log('error connecting to db')
