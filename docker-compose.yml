@@ -1,0 +1,16 @@
+version:  '3'
+services:
+  app:
+    container_name: donomo-server
+    restart: always
+    build: .
+    ports:
+      - '80:14441'
+    links:
+      - appdb
+
+  appdb:
+    container_name: mongo
+    image: mongo
+    ports:
+      - '27017:27017'
